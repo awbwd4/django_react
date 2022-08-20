@@ -14,7 +14,7 @@ import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-
+# 현재 장고 프로젝트의 루트 경로
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
@@ -120,3 +120,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
+# STATIC_ROOT = '' #TODO
+
+MEDIA_URL = '/media/'  # 업로드된 파일에 접근할때
+# 각 미디어 파일에 대한 url prefix, 필드명.url 속성에 의해서 참조되는 설정
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')  # 파일을 업로드할때
+# MEDIA_ROOT : 미디어 파일이 업로드된 경로, 이게 없으면 프로젝트 루트 경로에 저장이 됨

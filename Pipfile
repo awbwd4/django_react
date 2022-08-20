@@ -20,6 +20,8 @@ toml = "==0.10.2"
 tomli = "==2.0.1"
 typing-extensions = "==4.3.0"
 django-environ = "*"
+pillow = "*"
+jupyter = "*"
 
 [dev-packages]
 autopep8 = "*"
