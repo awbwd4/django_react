@@ -12,7 +12,10 @@ class Post(models.Model):
     #     return len(self.message)
 
     # message_length.short_description = "메세지 글자수"
-
     # java의 toString과 동일
+    #
+    class Meta:
+        ordering = ['-id']  # 디폴트 정렬 : 내림차순
+
     def __str__(self) -> str:
         return self.message

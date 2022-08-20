@@ -22,6 +22,7 @@ typing-extensions = "==4.3.0"
 django-environ = "*"
 pillow = "*"
 jupyter = "*"
+django-extensions = "*"
 
 [dev-packages]
 autopep8 = "*"
