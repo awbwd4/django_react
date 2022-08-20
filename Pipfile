@@ -23,6 +23,7 @@ django-environ = "*"
 pillow = "*"
 jupyter = "*"
 django-extensions = "*"
+django-debug-toolbar = "*"
 
 [dev-packages]
 autopep8 = "*"

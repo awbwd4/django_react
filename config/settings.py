@@ -40,12 +40,14 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     # third apps
     'django_extensions',
+    "debug_toolbar",
     # local apps
     'blog1',
     'instagram',
 ]
 
 MIDDLEWARE = [
+    "debug_toolbar.middleware.DebugToolbarMiddleware",
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -130,3 +132,9 @@ MEDIA_URL = '/media/'  # 업로드된 파일에 접근할때
 # 각 미디어 파일에 대한 url prefix, 필드명.url 속성에 의해서 참조되는 설정
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')  # 파일을 업로드할때
 # MEDIA_ROOT : 미디어 파일이 업로드된 경로, 이게 없으면 프로젝트 루트 경로에 저장이 됨
+
+INTERNAL_IPS = [
+    # 디버깅 툴 접속 가능한 아이피
+    "127.0.0.1",
+    # ...
+]
