@@ -136,5 +136,9 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')  # 파일을 업로드할때
 INTERNAL_IPS = [
     # 디버깅 툴 접속 가능한 아이피
     "127.0.0.1",
-    # ...
 ]
+
+
+# django가 기본으로 갖고있는 User모델이 아닌 직접 만든 모델을 쓸때
+# 디폴트값은 auth.User, django의 global setting에 지정돼있음
+# AUTH_USER_MODEL = 'instagram.User'

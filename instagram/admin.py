@@ -1,6 +1,6 @@
 from django.contrib import admin
 from django.utils.safestring import mark_safe
-from .models import Post
+from .models import Post, Comment
 
 # admin.site.register(Post)
 
@@ -27,3 +27,8 @@ class PostAdmin(admin.ModelAdmin):
 
     # def is_public(self):
     #     return "공개   여부"
+
+
+@admin.register(Comment)
+class CommentAdmin(admin.ModelAdmin):
+    pass
