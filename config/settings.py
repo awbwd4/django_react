@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     # local apps
     'blog1',
     'instagram',
+    'accounts',
 ]
 
 MIDDLEWARE = [
@@ -141,4 +142,5 @@ INTERNAL_IPS = [
 
 # django가 기본으로 갖고있는 User모델이 아닌 직접 만든 모델을 쓸때
 # 디폴트값은 auth.User, django의 global setting에 지정돼있음
+AUTH_USER_MODEL = 'auth.User'
 # AUTH_USER_MODEL = 'instagram.User'
