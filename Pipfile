@@ -24,6 +24,9 @@ pillow = "*"
 jupyter = "*"
 django-extensions = "*"
 django-debug-toolbar = "*"
+pandas = "*"
+xlwt = "*"
+requests = "*"
 
 [dev-packages]
 autopep8 = "*"
