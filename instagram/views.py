@@ -1,6 +1,6 @@
-from django.views.generic import ListView
-from django.shortcuts import render
-from django.http import HttpRequest, HttpResponse
+from django.views.generic import ListView, DetailView
+from django.shortcuts import get_object_or_404, render
+from django.http import HttpRequest, HttpResponse, Http404
 from .models import Post
 
 
@@ -19,13 +19,21 @@ post_list = ListView.as_view(model=Post)
 #     })
 
 
-def post_detail(request: HttpRequest, pk: int) -> HttpResponse:
-    response = HttpResponse()
-    response.write("hello world")
-    response.write("hello world")
-    response.write("hello world")
-    response.write("hello world")
-    return response
+# def post_detail(request: HttpRequest, pk: int) -> HttpResponse:
+#     post = get_object_or_404(Post, pk=pk)
+
+#     # try:
+#     #     post = Post.objects.get(pk=pk)
+#     # except Post.DoesNotExist:
+#     #     raise Http404
+
+#     return render(request, 'instagram/post_detail.html', {
+#         'post': post
+#     })
+
+
+post_detail  = DetailView.as_view(model=Post)
+
 
 
 def archives_year(request: HttpRequest, year: int) -> HttpResponse:
